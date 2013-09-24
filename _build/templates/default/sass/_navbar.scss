@@ -86,7 +86,16 @@
   @include image-set("../images/modx-logo.png", "../images/modx-logo@2X.png");
   background: $navbarBg url(../images/modx-logo.png) 18px 9px no-repeat;
   width: 110px;
-  /* don't tell mark */
+}
+#user-avatar img {
+  border-radius: 16px;
+  margin: 6px 4px 0 0;
+  line-height: 18px; 
+  display: block;
+  float: left;
+}
+#user-username {
+
 }
 
 #modx-navbar #modx-home-dashboard a {
