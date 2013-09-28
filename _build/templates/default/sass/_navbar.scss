@@ -59,8 +59,8 @@
   }
 }
 
-#modx-navbar ul#modx-settings-menu,
-#modx-navbar ul#modx-user-submenu {
+#modx-navbar #limenu-admin ul.modx-subnav,
+#modx-navbar #limenu-user ul.modx-subnav {
   left: auto;
   right: 0;
 }
@@ -90,6 +90,7 @@
 #user-avatar img {
   border-radius: 16px;
   margin: 6px 4px 0 0;
+  margin: 6px 6px 0 0;
   line-height: 18px; 
   display: block;
   float: left;
@@ -132,6 +133,7 @@
 #modx-navbar ul.modx-subnav li a {
   background-color: $navbarDrop;
   float: left;
+  font-weight: bold;
   line-height: 1.5;
   margin: 0;
   padding: 8px 15px;
