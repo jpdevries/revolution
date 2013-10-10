@@ -1,5 +1,5 @@
-    </div>
-    <!-- #modx-content-->
+        </div><!-- #modx-mainpanel-->
+    </div><!-- #modx-content-->
     <div id="modx-footer"></div>
 </div>
 <!-- #modx-container -->
