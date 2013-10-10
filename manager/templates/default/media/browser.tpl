@@ -34,7 +34,7 @@
 								<th><span class="show-table-view sortable-column">Edited On <i class="icon-sort" data-sortkey="editedon" data-format="date"></i></span><span class="hide show-grid-view">File name</span></th> 
 							</tr>
 						</thead>
-						<tbody class="clearfix">  
+						<tbody class="clearfix">  <!-- this needs to be dynamic -->
 							<tr>
 								<td>
 									<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02399.jpg" />

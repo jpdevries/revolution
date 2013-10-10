@@ -30,7 +30,7 @@ MODx.ctx = "'.$this->ctx.'";
         $mgrUrl = $this->modx->getOption('manager_url',null,MODX_MANAGER_URL);
         $this->addCss($mgrUrl.'templates/default/css/mediabrowser.css');
         $this->addJavascript($mgrUrl.'assets/koala/vendor/modernizr-2.6.2.min.js');
-        $this->addJavascript($mgrUrl.'assets/koala/vendor/jquery-1.9.1.min.js');
+        $this->addJavascript($mgrUrl.'assets/koala/vendor/jquery-1.10.2.min.js');
         $this->addJavascript($mgrUrl.'assets/koala/media-min.js');
     }
 
