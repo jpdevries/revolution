@@ -36,157 +36,157 @@
 						</thead>
 						<tbody class="clearfix">  <!-- this needs to be dynamic -->
 							<tr>
-								<td>
-									<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02399.jpg" />
-								</td>
-								<td>
-    								<span class="filename" data-sortkey="filename">A</span>
-								</td>
-								<td>
-    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
-								</td>
-								<td>
-    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
-								</td>
-								<td>
-    								<span class="last-modified" data-sortkey="editedon" data-date-time="1368286223000">5/11/13 08:30:23</span> 
-								</td>
-							</tr>
-								<tr>
-								<td>
-    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02398.jpg" />
-								</td>
-								<td>
-    								<span class="filename" data-sortkey="filename">B</span>
-								</td>
-								<td>
-    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
-								</td>
-								<td>
-    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
-								</td>
-								<td>
-    								<span class="last-modified" data-sortkey="editedon" data-date-time="1365780623000">4/12/13 08:30:23</span>
-								</td>
-							</tr>
-								<tr>
-								<td>
-    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02401.jpg" />
-								</td>
-								<td>
-    								<span class="filename" data-sortkey="filename">C</span>
-								</td>
-								<td>
-    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
-								</td>
-								<td>
-    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
-								</td>
-								<td>
-    								<span class="last-modified" data-sortkey="editedon" data-date-time="1276356623000">6/12/10 08:30:23</span>
-								</td>
-							</tr>
-								<tr>
-								<td>
-    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02404.jpg" />
-								</td>
-								<td>
-    								<span class="filename" data-sortkey="filename">D</span>
-								</td>
-								<td>
-    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
-								</td>
-								<td>
-    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
-								</td>
-								<td>
-    								<span class="last-modified" data-sortkey="editedon" data-date-time="1371052135219">6/12/13 08:30:23</span>
-								</td>
-							</tr>
-								<tr>
-								<td>
-    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02405.jpg" />
-								</td>
-								<td>
-    								<span class="filename" data-sortkey="filename">E</span>
-								</td>
-								<td>
-    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
-								</td>
-								<td>
-    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
-								</td>
-								<td>
-    								<span class="last-modified" data-sortkey="editedon" data-date-time="1371052135219">6/12/13 08:30:23</span>
-								</td>
-							</tr>
-								<tr>
-								<td>
-    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02436.jpg" />
-								</td>
-								<td>
-    								<span class="filename" data-sortkey="filename">F</span>
-								</td>
-								<td>
-    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
-								</td>
-								<td>
-    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
-								</td>
-								<td>
-    								<span class="last-modified" data-sortkey="editedon" data-date-time="1371052135219">6/12/13 08:30:23</span>
-								</td> 
-							</tr>
-								<tr>
-								<td>
-    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02441.jpg" />
-								</td>
-								<td>
-    								<span class="filename" data-sortkey="filename">G</span>
-								</td>
-								<td>
-    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
-								</td>
-								<td>
-    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
-								</td>
-								<td>
-    								<span class="last-modified" data-sortkey="editedon" data-date-time="1371052135219">6/12/13 08:30:23</span>
-								</td>
-							</tr>
-								<tr>
-								<td>
-    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02469.jpg" />
-								</td>
-								<td>
-    								<span class="filename" data-sortkey="filename">H</span>
-								</td>
-								<td>
-    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
-								</td>
-								<td>
-    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
-								</td>
-								<td>
-    								<span class="last-modified" data-sortkey="editedon" data-date-time="1371052135219">6/12/13 08:30:23</span>
-								</td>
-							</tr>
-								<tr>
-								<td>
-    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02472.jpg" />
-								</td>
-								<td>
-    								<span class="filename" data-sortkey="filename">I</span>
-								</td>
-								<td>
-    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
-								</td>
-								<td>
-    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
-								</td>
-								<td>
-    								<span class="last-modified" data-sortkey="editedon" data-date-time="1371052135219">6/12/13 08:30:23</span>
-								</td>
+									<td>
+										<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02399.jpg">
+									</td>
+									<td>
+	    								<span class="filename" data-sortkey="filename">A</span>
+									</td>
+									<td>
+	    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
+									</td>
+									<td>
+	    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
+									</td>
+									<td>
+	    								<span class="last-modified" data-sortkey="editedon" data-date-time="1368286223000">5/11/2013 08:30:23</span> 
+									</td>
+								</tr>
+									<tr>
+									<td>
+	    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02398.jpg">
+									</td>
+									<td>
+	    								<span class="filename" data-sortkey="filename">B</span>
+									</td>
+									<td>
+	    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
+									</td>
+									<td>
+	    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
+									</td>
+									<td>
+	    								<span class="last-modified" data-sortkey="editedon" data-date-time="1365780623000">4/12/2013 08:30:23</span>
+									</td>
+								</tr>
+									<tr>
+									<td>
+	    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02401.jpg">
+									</td>
+									<td>
+	    								<span class="filename" data-sortkey="filename">C</span>
+									</td>
+									<td>
+	    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
+									</td>
+									<td>
+	    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
+									</td>
+									<td>
+	    								<span class="last-modified" data-sortkey="editedon" data-date-time="1276356623000">6/12/10 08:30:23</span>
+									</td>
+								</tr>
+									<tr>
+									<td>
+	    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02404.jpg">
+									</td>
+									<td>
+	    								<span class="filename" data-sortkey="filename">D</span>
+									</td>
+									<td>
+	    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
+									</td>
+									<td>
+	    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
+									</td>
+									<td>
+	    								<span class="last-modified" data-sortkey="editedon" data-date-time="1371052135219">6/12/2013 08:30:23</span>
+									</td>
+								</tr>
+									<tr>
+									<td>
+	    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02405.jpg">
+									</td>
+									<td>
+	    								<span class="filename" data-sortkey="filename">E</span>
+									</td>
+									<td>
+	    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
+									</td>
+									<td>
+	    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
+									</td>
+									<td>
+	    								<span class="last-modified" data-sortkey="editedon" data-date-time="1371052135219">6/12/2013 08:30:23</span>
+									</td>
+								</tr>
+									<tr>
+									<td>
+	    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02436.jpg">
+									</td>
+									<td>
+	    								<span class="filename" data-sortkey="filename">F</span>
+									</td>
+									<td>
+	    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
+									</td>
+									<td>
+	    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
+									</td>
+									<td>
+	    								<span class="last-modified" data-sortkey="editedon" data-date-time="1371052135219">6/12/2013 08:30:23</span>
+									</td> 
+								</tr>
+									<tr>
+									<td>
+	    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02441.jpg">
+									</td>
+									<td>
+	    								<span class="filename" data-sortkey="filename">G</span>
+									</td>
+									<td>
+	    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
+									</td>
+									<td>
+	    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
+									</td>
+									<td>
+	    								<span class="last-modified" data-sortkey="editedon" data-date-time="1371052135219">6/12/2013 08:30:23</span>
+									</td>
+								</tr>
+									<tr>
+									<td>
+	    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02469.jpg">
+									</td>
+									<td>
+	    								<span class="filename" data-sortkey="filename">H</span>
+									</td>
+									<td>
+	    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
+									</td>
+									<td>
+	    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
+									</td>
+									<td>
+	    								<span class="last-modified" data-sortkey="editedon" data-date-time="1371052135219">6/12/2013 08:30:23</span>
+									</td>
+								</tr>
+									<tr>
+									<td>
+	    								<img class="file-element" src="http://jpdevries.s3.amazonaws.com/mediabrowser/assets/images/DSC02472.jpg">
+									</td>
+									<td>
+	    								<span class="filename" data-sortkey="filename">I</span>
+									</td>
+									<td>
+	    								<span class="file-size" data-sortkey="filesize" data-filesize="1024">1KB</span>
+									</td>
+									<td>
+	    								<span class="dimensions" data-sortkey="dimensions">800x600</span>
+									</td>
+									<td>
+	    								<span class="last-modified" data-sortkey="editedon" data-date-time="1371052135219">6/12/2013 08:30:23</span>
+									</td>
 							</tr>
 						</tbody>
 					</table>
