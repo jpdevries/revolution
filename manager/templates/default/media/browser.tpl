@@ -28,10 +28,10 @@
 						<thead>
 							<tr> 
 								<th>&nbsp;</th>
-								<th><span class="show-table-view sortable-column">File name <i class="icon-sort" data-sortkey="filename"></i></span><span class="hide show-grid-view">Edited On</span></th>
-								<th><span class="show-table-view sortable-column">File size <i class="icon-sort" data-sortkey="filesize" data-format="filesize"></i></span><span class="hide show-grid-view">Dimensions</span></th>
-								<th><span class="show-table-view sortable-column">Dimensions <i class="icon-sort" data-sortkey="dimensions"></i></span><span class="hide show-grid-view">File size</span></th>
-								<th><span class="show-table-view sortable-column">Edited On <i class="icon-sort" data-sortkey="editedon" data-format="date"></i></span><span class="hide show-grid-view">File name</span></th> 
+								<th><span class=" sortable-column">File name<i class="show-table-view icon-sort" data-sortkey="filename"></i><span class="show-grid-view">: </span><span class="show-grid-view val"></span></span></th>
+								<th><span class=" sortable-column">File size<i class="show-table-view icon-sort" data-sortkey="filesize" data-format="filesize"></i><span class="show-grid-view">: </span><span class="show-grid-view val"></span></span></th>
+								<th><span class=" sortable-column">Dimensions<i class="show-table-view icon-sort" data-sortkey="dimensions"></i><span class="show-grid-view">: </span><span class="show-grid-view val"></span></span></th>
+								<th><span class=" sortable-column">Edited On<i class="show-table-view icon-sort" data-sortkey="editedon" data-format="date"></i><span class="show-grid-view">: </span><span class="show-grid-view val"></span></span></th>
 							</tr>
 						</thead>
 						<tbody class="clearfix">  <!-- this needs to be dynamic -->
@@ -210,7 +210,7 @@
                 <span><i class="icon-picture" title="Import from URL"></i></span>
                 <span><i class="icon-upload-alt" title="Choose Files"></i></span>
             </p>
-            <p class='cancel-upload'><i class="icon-remove"></i></p>
+            <p class="cancel-upload"><i class="icon-remove" title="Uploading 3 files: A.jpg (100%), B.jpg (30%), C.jpg (20%)"></i></p>
         </div>
     </div>
 </div>
