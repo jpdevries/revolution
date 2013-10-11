@@ -9,9 +9,15 @@
 			<h3 class="title" class="clearfix">
 				<div class="" style="position:relative"><i class="icon-level-up" style="cursor:pointer;padding:0 12px 0 0"></i><span class="breadcrumb">/<a title="Browse assets">assets</a>/<a title="Browse assets/images">images</a>/<a title="Browse assets/images/hawaii">hawaii</a>/</span>
 					<ul class="options">
+						<!--li><a><i title="Search" class="icon-search"></i></a></li-->
+						<li><a title="New Folder"><i class="icon-folder-close"></i></a></li>
+						<li><a title="New File"><i class="icon-file"></i></a></li>
+						<li><a title="Bookmark Directory"><i class="icon-bookmark"></i></a></li>
 						<li><a title="Grid View"><i class="icon-th-large"></i></a></li>
 						<li><a title="List View"><i class="icon-list"></i></a></li>
 						<li><a><i title="Upload Files" class="icon-upload"></i></a></li>
+						<li class="hide-expand"><a><i title="Maximize" class="resize icon-resize-full"></i></a></li>
+						<li class="show-expand"><a><i title="Minimize" class="resize icon-resize-small"></i></a></li>
 					</ul>
 				</div>
 			</h3>
