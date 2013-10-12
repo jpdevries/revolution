@@ -2622,7 +2622,7 @@ if (typeof exports == "object") {
         // feed it JSON, updates the view
         // 
         plugin.update = function(_json) {
-            redraw(_json.results); 
+            redraw(_json);
 
             assignListeners();
             plugin.settings.onUpdate($element);
@@ -2733,7 +2733,6 @@ if (typeof exports == "object") {
             for(var i = 0; i < _l; i++) {
                 var _h = $(plugin.settings.rowChunk);
                 var _di = _a[i];
-				_di.editedon = Number(_di.editedon);
                 _h.find('.filename').html(_di.filename);
                 _h.find('.file-size').html(formatFilesize(_di.filesize)).attr('data-filesize',_di.filesize);
                 _h.find('.dimensions').html(_di.dimensions);
@@ -2915,11 +2914,9 @@ $(document).ready(function(){
 	$.ajax({type: "POST",
 	  url: '/connectors/index.php',
 	  data: {action:'media/getlist',HTTP_MODAUTH:MODx.siteId},
-	  dataType: 'json',
-	  success: function(data, textStatus, jqXHR) {
-	  	console.log(data);
-	  	_mediaBrowser.update(data);
-	  }
+	  	success: function(data, textStatus, jqXHR) {
+			_mediaBrowser.update(data);
+		}
 	});
 
 
