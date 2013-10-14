@@ -56,7 +56,8 @@
   @include box-sizing;
   background: rgba(240, 240, 240, 0.95);
   border-radius: 0 0 2px 2px;
-  border: $borderColor;
+  border: 1px solid $borderColor;
+  border-top:none;
   box-shadow: $shadower;
   height: auto !important;
   margin: 2px 0 0 0;
