@@ -1,4 +1,4 @@
-@mixin shaded-box($borderW:3px,$borderC:$gainsboro) {
+@mixin shaded-box($borderW:3px,$borderC:rgb(244,244,244)) {
 	border:$borderW solid $borderC;
 	border-radius:$borderW;
 	padding:0;
