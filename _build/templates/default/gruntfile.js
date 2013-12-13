@@ -5,14 +5,34 @@ module.exports = function(grunt) {
 		dirs: { /* just defining some properties */
 			lib: './lib/',
 			scss: './sass/',
-			css: '../../../manager/templates/default/css/',
-			template: '../../../manager/templates/default/'
+			template: '../../../manager/templates/default/',
+			css: '<%= dirs.template %>css/',
+			js: '../../../manager/assets/modx/',
 		},
 		bower: {
 			install: {
 				options: {
 					targetDir: './lib',
 					layout:'byComponent'
+				}
+			}
+		},
+		concat: {
+			options: {
+				separator: '',
+			},
+			media: {
+				src: ['<%= dirs.js %>vendor/jquery.knob.js','<%= dirs.js %>vendor/jquery.contextMenu.js','<%= dirs.js %>vendor/jquery.tableSelect.js','<%= dirs.js %>vendor/dropzone.js','<%= dirs.js %>mediaBrowser.js','<%= dirs.js %>media.js'],
+				dest: '<%= dirs.js %>media-<%= pkg.version %>.js',
+			},
+		},
+		uglify: {
+			media: {
+				options: {
+					report: 'min',
+				},
+				files: {
+					'<%= dirs.js %>media-<%= pkg.version %>.min.js': ['<%= dirs.js %>media-<%= pkg.version %>.js']
 				}
 			}
 		},
@@ -110,7 +130,16 @@ module.exports = function(grunt) {
 					'<%= dirs.css %>index.css': 'sass/index.scss',
 					'<%= dirs.css %>login.css': 'sass/login.scss'
 				}
-			}
+			},
+			media: {
+				options: {
+					style: 'expanded',
+					compass: false
+				},
+				files: {
+					'<%= dirs.css %>mediabrowser.css': 'sass/mediabrowser.scss'
+				}
+			},
 		},
 		autoprefixer: { /* this expands the css so it needs to get compressed with cssmin afterwards */
 			options: {
@@ -144,6 +173,10 @@ module.exports = function(grunt) {
 			scss: {
 				files: ['<%= dirs.scss %>*','<%= dirs.scss %>components/**/*'],
 				tasks: ['sass:dist', 'autoprefixer', 'cssmin:compress', 'growl:sass']
+			},
+			js: {
+				files: ['<%= dirs.js %>vendor/jquery.knob.js','<%= dirs.js %>vendor/jquery.contextMenu.js','<%= dirs.js %>vendor/jquery.tableSelect.js','<%= dirs.js %>vendor/dropzone.js','<%= dirs.js %>mediaBrowser.js','<%= dirs.js %>media.js'],
+				tasks: ['concat:media','uglify:media']
 			}
 		},
 		clean: { /* take out the trash */
@@ -183,6 +216,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
 	// Tasks
@@ -190,4 +225,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', ['clean:prebuild','bower', 'copy', 'sass:dist','autoprefixer', 'growl:prefixes', 'growl:sass','cssmin:compress','clean:postbuild']);
 	grunt.registerTask('expand', ['sass:dev', 'autoprefixer', 'growl:prefixes', 'growl:sass', 'growl:expand']);
 	grunt.registerTask('ship', ['clean:prebuild','bower', 'copy', 'sass:dist','autoprefixer', 'growl:prefixes', 'growl:sass','cssmin:ship','clean:postbuild']);
+	grunt.registerTask('media',['concat:media','uglify:media','sass:media']);
 };

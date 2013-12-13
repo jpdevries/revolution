@@ -1,48 +1,3 @@
-/*!
-    ___   ___                                                                                                    __              
- /'___\ /\_ \                                                              __                                  /\ \__           
-/\ \__/ \//\ \       __    __  _     __    __  _   _____      __    _ __  /\_\     ___ ___       __     ___    \ \ ,_\    ____  
-\ \ ,__\  \ \ \    /'__`\ /\ \/'\  /'__`\ /\ \/'\ /\ '__`\  /'__`\ /\`'__\\/\ \  /' __` __`\   /'__`\ /' _ `\   \ \ \/   /',__\ 
- \ \ \_/   \_\ \_ /\  __/ \/>  </ /\  __/ \/>  </ \ \ \L\ \/\  __/ \ \ \/  \ \ \ /\ \/\ \/\ \ /\  __/ /\ \/\ \   \ \ \_ /\__, `\
-  \ \_\    /\____\\ \____\ /\_/\_\\ \____\ /\_/\_\ \ \ ,__/\ \____\ \ \_\   \ \_\\ \_\ \_\ \_\\ \____\\ \_\ \_\   \ \__\\/\____/
-   \/_/    \/____/ \/____/ \//\/_/ \/____/ \//\/_/  \ \ \/  \/____/  \/_/    \/_/ \/_/\/_/\/_/ \/____/ \/_/\/_/    \/__/ \/___/ 
-                                                     \ \_\                                                                      
-                                                      \/_/                                                                      
- 
-*/
-// @codekit-append "jquery.knob.js";
-// @codekit-append "dummy_json.js";
-// @codekit-append stringutil.js";
-// @codekit-append "vendor/jquery.contextMenu.js"; 
-// @codekit-append "vendor/jquery.tableSelect.js";
-// @codekit-append "vendor/dropzone.js";
-// @codekit-append mediaBrowser.js";
-
-
- 
-// Avoid `console` errors in browsers that lack a console.
-(function() {
-    var method;
-    var noop = function noop() {};
-    var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeStamp', 'trace', 'warn'
-    ];
-    var length = methods.length;
-    var console = (window.console = window.console || {});
-
-    while (length--) {
-        method = methods[length];
-
-        // Only stub undefined methods.
-        if (!console[method]) {
-            console[method] = noop;
-        } 
-    }
-}());
-
 /*!jQuery Knob*/
 /**
  * Downward compatible, touchable dial
@@ -720,76 +675,7 @@
         ).parent();
     };
 
-})(jQuery);
-var dummyJSON = {
-	"total":"9",
-	"cd":"/assets/images/hawaii",
-	"results":[{
-		"filename":"A",
-		"src":"assets/images/DSC02398.jpg",
-		"filesize":"1048576",
-		"dimensions":"800x600",
-		"editedon":"1266469440"
-	},
-	{
-		"filename":"B",
-		"src":"assets/images/DSC02399.jpg",
-		"filesize":"2048",
-		"dimensions":"800x600",
-		"editedon":"1261112640"
-	},
-	{
-		"filename":"C",
-		"src":"assets/images/DSC02401.jpg",
-		"filesize":"1025",
-		"dimensions":"800x600",
-		"editedon":"1266469440"
-	},
-	{
-		"filename":"D",
-		"src":"assets/images/DSC02404.jpg",
-		"filesize":"1024",
-		"dimensions":"800x900",
-		"editedon":"1353215040"
-	},
-	{
-		"filename":"E",
-		"src":"assets/images/DSC02405.jpg",
-		"filesize":"1023",
-		"dimensions":"900x600",
-		"editedon":"1353215040"
-	},
-	{
-		"filename":"F",
-		"src":"assets/images/DSC02436.jpg",
-		"filesize":"1024",
-		"dimensions":"800x600",
-		"editedon":"1353215040"
-	},
-	{
-		"filename":"G",
-		"src":"assets/images/DSC02441.jpg",
-		"filesize":"1024",
-		"dimensions":"800x600",
-		"editedon":"1353215040"
-	},
-	{
-		"filename":"H",
-		"src":"assets/images/DSC02469.jpg",
-		"filesize":"1024",
-		"dimensions":"800x600",
-		"editedon":"1353215040"
-	},
-	{
-		"filename":"I",
-		"src":"assets/images/DSC02472.jpg",
-		"filesize":"1024",
-		"dimensions":"800x600",
-		"editedon":"1353215040"
-	}]
-};
-
-/**
+})(jQuery);/**
  * jQuery.contextMenu - Show a custom context when right clicking something
  * Jonas Arnklint, http://github.com/arnklint/jquery-contextMenu
  * Released into the public domain
@@ -907,8 +793,7 @@ var dummyJSON = {
       return me.bind(mouseEvent, mouseEventFunc);
     }
   }
-})(jQuery);
-/*
+})(jQuery);/*
  * Copyright (c) 2012 Nathan Firth <nathan@firthusa.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -1104,8 +989,7 @@ var dummyJSON = {
 		
 	};
 	
-})(jQuery);
-;(function(){
+})(jQuery);;(function(){
 
 /**
  * Require the given path.
@@ -2548,8 +2432,7 @@ if (typeof exports == "object") {
   define(function(){ return require("dropzone"); });
 } else {
   this["Dropzone"] = require("dropzone");
-}})();
-// MODX 
+}})();// MODX 
 // A boilerplate for jumpstarting jQuery plugins development
 // version 1.1, May 14th, 2011
 // by Stefan Gabos
@@ -2797,8 +2680,7 @@ if (typeof exports == "object") {
 
     }
 
-})(jQuery);
-// @codekit-prepend "plugins.js";  
+})(jQuery);// @codekit-prepend "plugins.js";  
 
 $(document).ready(function(){
 	//$('.flexbox').removeClass('flexbox').addClass('no-flexbox'); // force .no-flexbox for testing 

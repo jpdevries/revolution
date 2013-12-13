@@ -1,0 +1,850 @@
+/* @import "boilerplate-4.2.0"; */
+@import "colors-and-vars";
+@import 'utility';
+@import "image-set";
+@import 'flexbox';
+
+/* local mixins */
+@import 'bourbon/bourbon';
+
+
+/* variables */
+$borderGrey:#CECECE;
+
+/* start global */
+.dashboard-block .body {
+	max-height: none;
+}
+
+@mixin oh-extjs() {
+	top:auto !important;
+	left:auto !important;
+	width:auto !important;
+}
+
+.hide {
+	display:none;
+}
+
+#modAB {
+	display:none;
+}
+
+.dashboard-block { float:none }
+.x-panel-body { overflow:hidden !important }
+
+.breadcrumb {
+	a {
+		cursor: pointer;
+	}
+}
+
+.icon-sort { cursor:pointer }
+
+.grid-view {
+	.mx-file-list {
+		thead {
+			/*padding-top:0.5em; */
+		}
+		.val {
+			font-weight:normal;
+		}
+	}
+} 
+/* end global */
+
+#modx-content * { @include box-sizing(border-box) } /* why not? */
+.flexbox #modx-content {
+	padding-left: 6px;
+	top:0 !important;
+}
+.flex-left {
+	&:first-of-type {
+		padding:0px 0 0 4px;
+	}
+}
+
+.flexbox {
+	.browser-panel { 
+		form {
+			@include flex(1,1,100%); /* be flexible, grow, shrink */
+			width:100%;
+			> div { /* hacky */
+				/*display:none;*/ 
+			}
+		}	
+	}
+}
+
+/* start flexible layout (new school) */
+.flexbox {
+	#modx-mainpanel {
+		@include flexbox(flex,column,no-wrap); /* flex children vertical no wrapping */
+	}
+
+	#modx-header {
+		/* @include flex(); be flexible */
+	}
+
+	#modx-content {
+		position:relative;
+		@include flex(1,0); /* be flexible, grow, don't shrink */
+		@include flexbox(flex,column,no-wrap); /* flex children vertical no wrapping */
+
+		/* oh, ExtJS 
+		@include oh-extjs(); */
+	} 
+
+	.drag-upload {
+		width:0;
+	}
+
+	#modx-content .x-panel-bwrap {
+		@include flex(1,0); /* be flexible, grow, don't shrink */
+		@include flexbox(flex,column,no-wrap); /* flex children vertical no wrapping */
+
+		.x-panel-body {
+			/*width:100%;*/
+			@include flex(1,0,100%); /* take up all the space */
+			@include flexbox(flex,row,no-wrap,start,stretch); /* flex children no wrapping */
+
+			.flex-left {
+				@include flex(1,1,100%); /* grow, shrink, take up all the space */
+				@include flexbox(flex,column,no-wrap);  /* flex children vertical no wrapping */
+				/*width:100%;*/
+
+				&:first-of-type {
+					padding-right:6px;
+				}
+
+				&.drag-upload { display:none }
+			}
+
+			/*.nox-wrap {
+				@include flexitem(0,0,0,auto,stretch); 
+			}*/
+
+			.file-browser {
+				@include flexitem(1,1,1,auto,stretch); /* second, grow, shrink, auto basis, stretch */
+				@include flexbox(flex,column,no-wrap); /* flex children vertical no wrapping */
+				
+				h3.title {
+					@include flexitem(0,0,0,auto,stretch); /* first, don't grow, don't shrink, auto basis, stretch */
+				}
+
+				.body {
+					@include flexitem(1,1,1,auto,stretch); /* second, grow, shrink, auto basis, stretch */
+					@include flexbox(flex,column,no-wrap); /* flex children vertical no wrapping */
+					.meta {
+
+					}
+					.section {
+						@include flexitem(0,1,1,auto,stretch); /* first, grow, shrink, auto basis, stretch */
+						@include flexbox(flex,column,no-wrap); /* flex children vertical no wrapping */
+					}
+				}
+			}
+		}
+	}
+	#modx-content .x-panel-bwrap .x-panel-body.drag-open .flex-left.drag-upload {
+		@include flex(1,0,218px); /* be flexible, grow don't shrink 218px wide */
+		.dashboard-block {
+			@include flexbox(flex,column,no-wrap); /* flex children vertical no wrapping */
+			@include flex(1,1); /* be flexible, grow, shrink */
+		}
+		.upload-options {
+			@include flex(0,0,3em); /* be flexible, don't grow, don't shrink, 1em tall */
+			@include flexbox(); /* flex children */
+			font-size:1em;
+			span {
+				@include flex(1,1); /* be flexible, grow, shrink */
+			}
+		}
+	}
+	.drop-area {
+		@include flex(1,1); /* be flexible, grow, shrink */
+		@include flexbox(flex,column,no-wrap); /* flex children vertical no wrapping */
+	}
+	.mx-file-list {
+		@include flex(1,1); /* be flexible, grow, shrink */
+		@include flexbox(flex,column,no-wrap); /* flex children vertical no wrapping */
+		thead {
+			@include flexitem(4,0,1,25px); /* 4th, don't grow, shrink, 25px tall */
+		}
+		tbody {
+			@include flexitem(5,1,1,100%); /* 5th, grow, shrink, 100% */
+		}
+	}
+
+	#modx-footer {
+		@include flex(0,0); /* be flexible, don't grow don't shrink */
+		position: inherit;
+		/* oh, ExtJS */
+		@include oh-extjs();
+	}
+}
+/* end flexible layout */
+
+.progress {
+	display:none;
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background:rgba(255,255,255,0.6);
+	> div {
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin-left:-30px;
+		margin-top:-30px;
+	}
+}
+
+/* start no-flexbox layout (old school) */
+ .no-js, .no-flexbox, .flexbox-legacy { /* gonna be a pain but git rid of these */
+ 	height:100%;
+ 	body { height:100%; }
+	#modx-header {
+		position:relative; /* nate told me to do it */
+		top:0;
+		left:0;
+		width:100% !important; /* oh extjs */
+	}
+
+	.modx-mainpanel {
+		@extend %clearfix;
+	}
+
+	#modx-content {
+		@include box-sizing(border-box);
+		/*left:auto !important;
+		top:auto !important;
+		position: relative !important; */
+		width:100% !important;
+		padding-bottom:75px !important; 
+		padding-bottom:15px;
+		float:left;
+		min-height:100%;
+		height:100%;
+	}
+
+	.x-panel-bwrap, .x-panel-body, .flex-left {
+		min-height:100%;
+		height:100%;
+	}
+
+	/*.nox-wrap {
+		width:100%;
+	}*/
+
+	.flex-left {
+		position: relative;
+	}
+
+	.x-panel-bgwrap {
+		width:100%;
+	}
+
+	.grid-view {
+		tbody {
+			display:block;
+		}
+		.mx-file-list tbody tr td {
+			&:first-of-type { display:inline-block !important; }
+			max-width:100%;
+		}
+	}
+
+	.table-view {
+		tbody {
+			/*display:block; */
+		}
+		thead {
+			tr {
+				position: relative;
+				/*display:block;*/
+			}
+		}
+	}
+
+	.x-panel-body {
+		overflow:hidden;
+
+	}
+	.drag-open {
+		&.x-panel-body /*.flex-left:first-of-type, .nox-wrap*/ {
+				 padding-right:230px !important;  /*consider something else, maybe table cell */
+			
+		}
+		.drag-upload {
+
+		}
+	}
+	.flex-left {
+		position:relative;
+		/*padding-right:15px;*/
+		&:first-of-type {
+			/*display:table;*/
+			padding-bottom:6px;
+			width:100%;
+			/*.nox-wrap {
+				display:table-row;
+				border:none;
+				height:60px;
+				padding:0;
+				h2 {
+					padding-top:14px;
+				}
+			}*/
+			.dashboard-block {
+				/*display:table-row;*/
+				height:100%; 
+				border:1px solid #ddd;
+				position:relative;
+				h3 {
+					border:1px solid #ddd;
+					border-bottom:none;
+					position:absolute;
+					/*top:56px;*/
+					top:0;
+					left:0;
+					width:100%;
+					z-index:999999;
+				}
+				.body {
+					border:1px solid #ddd;
+					border-color:transparent;
+					padding-top:32px;
+					padding-top:4%;
+					height:96%;
+					/*height:100%;*/
+					overflow-y:hidden;
+					/*-webkit-box-sizing:content-box !important;
+					-moz-box-sizing:content-box !important;
+					-o-box-sizing:content-box !important;
+					-ms-box-sizing:content-box !important;
+					box-sizing:content-box !important;*/
+					.section {
+						height:100%;
+						
+					}
+				}
+			}
+		}
+	}
+
+	.mx-file-list { /* table */
+		display:block;
+		height:96%;
+		position:relative;
+		tbody {
+			display:block;
+			width:100%;
+			max-height:100%;
+			/*margin-top:27px;*/
+		}
+		thead {
+			position:relative;
+			width:100%;
+			z-index:999999;
+			background:white;
+			top:-27px;
+			left:0;
+		}
+	}
+
+	.grid-view {
+		.mx-file-list {
+			thead {
+				top:0;
+			}
+		}
+	}
+
+	.drag-upload {
+		display:none;
+		padding:0;
+		position:absolute;
+		top:0;
+		right:0;
+		height:100%;
+		width:218px;
+		.dashboard-block, .drop-area {
+			height:100%;
+		}
+	}
+	.progress {
+		display:table-row;
+		> div {
+			display:table-cell;
+		}
+	}
+
+	.table-view .mx-file-list tbody tr {
+		display:table-row;
+	}
+
+	.dashboard-block {
+		/*padding-top:46px;*/
+		/*min-height: 100%;*/
+		margin-bottom:0;
+	}
+
+	.upload-options {
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		padding:0 16px !important;
+		@extend %clearfix;
+		span {
+			width:50%;
+			float:left;
+		}
+	}
+
+	.drag-upload {
+		.dashboard-block {
+			padding-bottom:16px !important;
+		}
+	}
+
+}
+/* end no-flexbox layout */ 
+
+/* start drag open */
+#modx-content .x-panel-bwrap .x-panel-body.drag-open .flex-left.drag-upload {
+	display:inherit;
+	border-left:none;
+	
+
+	.dashboard-block {
+	/*@include box-shadow(inset 1px 3px 8px rgba(80,80,80,0.68));*/
+	margin-top:0;
+	border:1px solid #CECECE;
+	border-left:none;
+	padding:16px 16px 0 16px;
+
+		width:100%;
+		float:none;
+		background:#eeecec;
+		position:relative;
+	}
+
+	.upload-options {
+		text-align: center;
+		font-size:80%;
+		width:100%;
+		padding:4px 0;
+		color:rgb(144,144,144);
+
+		span {
+			i { cursor:pointer; }
+		}
+	}
+}
+	.cancel-upload {
+		color:rgb(144,144,144);
+		position:absolute;
+		left:0;
+		top:50%;
+		width:100%;
+		margin-top:-30px;
+		padding-top:22px;
+		text-align: center;
+		display:none;
+		height:60px;
+		i {
+			margin:0 auto;
+			cursor:pointer;
+			visibility: hidden;
+			background:#F5F5F5;
+			width:24px;
+			height:12px;
+			display:inline-block;
+		}
+		&:hover {
+			i {
+				visibility:visible;
+			}
+		}
+	}
+/* end drag open */
+
+/* start uploading view */
+.drag-upload {
+	/* @include flex(0,0);  dont grow or shrink */
+	padding:0;
+	display:none; /* hidden initially */
+}
+
+.mx-uploading {
+	.cancel-upload { display:inherit !important; }
+	tr,td {
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+		outline: medium none;
+	}
+
+	.drag-upload {
+		.icon-upload-alt {
+			/*opacity:0.4;*/
+		}
+	}
+
+	.cancel-upload {
+		/*display:inherit !important;*/
+	}
+
+	.drag-upload .upload-options {
+		opacity:1 !important;
+		/*color:#909090;*/
+	}
+
+	.progress {
+		display:inherit !important;
+	}
+}
+
+.drop-area {
+	border:2px dashed #CECECE;
+	border-radius:12px;
+	width:100%;
+	margin-bottom:6px;
+	position:relative;
+}
+
+
+/* end uploading view */
+
+.small-right {
+	float:right;
+	size:80%;
+	font-weight:normal;
+	padding-right:42px;
+	padding-top:1px;
+}
+
+.meta {
+	font-size:90%;
+	label {
+		font-weight: bold;
+	}
+	span {
+		padding-right:20px;
+		&:last-of-type {
+			padding-right:0;
+		}
+	}
+	.stream-search {
+		width:25%;
+		float:left;
+		h3 {
+			float:left;
+		}
+	}
+	.right {
+		width:60%;
+		float:right;
+		text-align:right;
+		i {
+			float:right;
+		}
+	}
+	form {
+	float:left;
+	}
+	input.search {
+		border-radius:4px;
+	}
+	padding-bottom:8px;
+	border-bottom:1px solid $borderGrey;
+	margin-bottom:12px;
+}
+
+.media-stream {
+	.options {
+		position:absolute;
+		bottom:-4px;
+		right:3px;
+		font-size:160%;
+		cursor:pointer;
+
+		li {
+			display:inline-block;
+			margin:0;
+			padding:0 4px 0 0;
+			color:#767676;
+			a {
+				&:hover {
+					color:darken(#767676,10%);
+				}
+			}
+			i {
+				font-size:0.9em;
+			}
+			.resize {
+				font-size:0.7em;
+			}
+
+			&:last-of-type {
+				margin-right:0;
+			}
+			&.hide-expand {
+				display:none;
+			}
+			/*&.divider {
+				border-right:1px solid #A2A2A2;
+			}*/
+		}
+	}
+}
+
+.hide-expand { display:none }
+.drag-open .media-stream .options li.hide-expand {
+	display:inline;
+}
+
+.drag-open .show-expand {
+	display:none !important;
+}
+
+
+
+#modx-content .x-panel-bwrap {
+	padding-right:0;
+}
+
+.dashboard-block-full {
+	width:100%;
+}
+
+/* start JavaScript */
+.js {
+	.mx-file-list {
+		.details { display:none; }
+	}
+}
+/* end JavaScript */
+
+.mx-file-list {
+	
+	thead {
+		th { height:26px; }
+		border-bottom:1px solid $borderGrey;
+		tr {
+			
+		}
+	}
+	td {
+		font-size:11px;
+	}
+	tbody {
+		overflow-y:auto;
+		min-height: 0;
+		width:100%;
+	}
+	.stream-search {
+		h3,form {
+			float:left;
+		}
+	}
+}
+
+/* start table view */
+.table-view {
+	.show-table-view {
+		display:inherit;
+	}
+	tr {
+		@include transition(background);
+	}
+	.selected {
+		background:#EBEBEB;
+	}
+	.show-grid-view {
+		display:none;
+	}
+	.mx-file-list {
+		width:100%;
+		border-collapse: collapse;
+		tbody {
+			tr {
+				border-bottom:1px solid $borderGrey;
+				width:100%;
+				display:inline-block;
+				&:last-of-type {
+					border-bottom:none;
+				}
+			}
+			td {
+				padding:0.5em 0;
+				
+			}
+		}
+		tr {
+			&:first-of-type {
+
+			}
+			td,th {
+				width:20%;
+				position:relative;
+				text-align:left;
+				vertical-align: bottom;
+				figcaption,span {
+					/*position:absolute;
+					bottom:0.4em;
+					left:0;*/
+					padding-left:0.5em;
+				}
+
+				&:first-of-type {
+					img {
+						max-width:100%;
+					}
+					width:12.5%;
+					img { max-height:64px; }
+
+				}
+				&:first-of-type {
+					
+					width:240px;
+				}
+				&:last-of-type {
+					max-width:120px;
+				}
+			}
+			th {
+				font-weight:bold;
+			}
+		}
+	}
+}
+/* end table view */
+
+/* start grid view */
+
+/*.flexbox .x-panel-bwrap .x-panel-body.grid-view .file-browser .body {
+	padding-top:0;
+}*/
+
+.grid-view {
+	.show-table-view { display:none    }
+	.show-grid-view  { display:inherit }
+	.filename {
+		padding:0 2px;
+
+	}
+	.mx-file-list {
+		margin:0;
+		padding:0;
+		thead {
+			margin-bottom:8px;
+			th {
+				/*float:right;*/
+				padding:0 6px;
+				font-weight:bold;
+				&:first-of-type {
+					float:left;
+					padding:0;
+					/*min-width:360px;*/
+					font-weight:normal;
+				}
+			}
+		}
+
+		thead,thead tr {
+			width:100%;
+			display:inline-block;
+		}
+
+		tbody tr {
+			display:block;
+			width:19.4%;
+			margin:0 0.60% 0.60% 0;
+			padding:0;
+			float:left;
+			td {
+				display:none; 
+				&:first-of-type, &:nth-of-type(2) { display:table-cell;float:left; }
+			}
+			figure {
+				margin:0;
+				padding:0;
+			}
+			color:#222;
+			figcaption {
+				text-align: center;
+				font-size:80%;
+				padding-top:3px;
+			}
+			.file-element {
+				cursor:pointer;
+			}
+			img {
+				max-width:100%;
+			}
+
+			@media only screen and (min-width: 1200px) {
+				&:nth-of-type(5n) {
+					margin-right: 0;
+				}			
+			}
+
+			&.selected {
+				background-color:#DDD;
+			}
+		}
+
+		@media only screen and (max-width: 1024px) and (min-width: 768px) {
+			li {
+				width:24.5%;
+				&:nth-of-type(4n) { margin-right:0 }
+			}
+		}
+
+		@media only screen and (max-width: 768px) {
+			li {
+				width:32.87%;
+				&:nth-of-type(3n) { margin-right:0 }
+			}
+		}
+
+	}
+}
+/* end grid view */
+
+#modcontext {
+	font-size:80%;
+	background:rgba(255,255,255,0.92);
+	border-radius:6px;
+	box-shadow:0 2px 6px 2px rgba(20,20,20,0.4);
+	overflow:hidden;
+	padding:0.25em 0;
+	li {
+
+	}
+	a {
+		padding:0.5em 1.5em 0.25em 1.5em;
+		line-height:100%;
+		display:block;
+		color:rgb(94,94,94);
+		text-decoration: none;
+		border-bottom:1px solid transparent;
+		border-top:1px solid transparent;
+		&:hover {
+			background:rgba(66,148,191,0.9);
+			color:white;
+			border-color:#426D97;
+		}
+	}
+	&.table-multiple-selected {		 
+		.modcontext-copyurl, .modcontext-download { display:none; } 
+	}
+}
+

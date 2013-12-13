@@ -12,6 +12,9 @@ config.core.php
 *-min.css
 *-min.js
 
+# ignore source maps
+*.css.map
+
 # ignore concatenated js
 modext.js
 
